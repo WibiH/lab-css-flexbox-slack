@@ -1,10 +1,10 @@
 body {
     max-width: 1200px;
-    display: flex;
-    flex-direction: column;
     margin: 0 auto;             /* why does the margin:0 auto; not work? */
     font-family: Helvetica, Arial, sans-serif;
     line-height: 1.5em;
+    padding: 0 16px;
+    color: #5b5e6d;  
 }
 
  img {
@@ -16,14 +16,14 @@ nav {
     justify-content: space-between;
 }
 
-nav img {                       /* why would the img be shrinked in that case? */
-    max-width: 10%;
+nav img {                     
+    width: 20%;               /* why would the img be shrinked in that case? */
     height: auto;
+    margin-right: auto;
 }
 
  nav ul {
     list-style: none;
-    color: #5b5e6d;    ;
 }
 
 h1,
@@ -48,15 +48,17 @@ p {
     color: #5b5e6d;
     font-size: 1.2em;
     text-align: center;
+    margin: 0 0 30px 0;
 }
 
 .blueButton {
-    width: 350px;
+    width: 330px;
     height: 50px;
     border: none;
     border-radius: 0.5em;
     background-color: #192592;
     color: white;
+    margin: 0 0 16px 0;
 }
 
 .greyBackground{
@@ -74,10 +76,11 @@ main div img {
 
 .serifTitle {
     font-size: 1.5em;
+    margin: 40px 0 0;
 }
 
 #whiteButton {
-    width: 350px;
+    width: 330px;
     height: 50px;
     border: none;
     border-radius: 0.5em;
@@ -85,11 +88,38 @@ main div img {
     color: #192592;
 }
 
-footer div ul {
-    list-style: none;
+footer div img {
+    width: 50%;
+    display: block;
 }
 
-footer > div .footerNav {
+footer div:first-child ul {
+    list-style: none;
+    display: inline-block;
+    justify-content: baseline;
+    line-height: 2.5em;
+}
+
+footer div:last-child ul {
+    list-style: none;
+    font-weight: bold;
     display: flex;
     flex-direction: row;
+    font-size: 0.8em;
+    gap: 16px;
+    padding: 20px 0;
+    align-items: center;
+}
+
+footer div:last-child div{
+    display: flex;
+    flex-direction: row;
+    font-size: 1em;
+    gap: 16px;
+    padding: 20px 0;
+    align-items: center;
+}
+
+footer div:last-child div img{          /* is there a limit to wildly compiling names? */ 
+    width: 5%;
 }
